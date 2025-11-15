@@ -43,38 +43,56 @@ class _OnboardingState extends State<Onboarding> {
                 "Connect people around the world for free",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: Colors.black54,fontSize: 20,
+                    color: Colors.black54,fontSize: 18,
                     fontWeight: FontWeight.w500),
 
               ),
             ),
+            SizedBox(height: 20.0),
+
             Container(
-              padding: EdgeInsets.only(top:8.0,left: 10.0,bottom: 8.0),
-              margin: EdgeInsets.only(left: 30.0,right: 30.0),
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                color: Color(0xff703eff)),
-              child: Row(
-                children: [
-                  Image.asset("images/google.png",
-                  height: 50,
-                  fit: BoxFit.cover,
-                  ),
-                  SizedBox(width: 30,),
-                  Text("Sign in with Google",
-                  textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 21,
-                        fontWeight: FontWeight.bold),
+              margin: EdgeInsets.only(left: 50.0,right: 70.0),
+
+              child: Material(
+                elevation: 3.0,
+                color: Colors.transparent,
+                borderRadius: BorderRadius.circular(30),
+                child: Container(
+                  height: 70,
+
+                  padding: EdgeInsets.only(top:8.0,left: 40.0,bottom: 8.0),
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: Color(0xff703eff),borderRadius: BorderRadius.circular(30),),
+                  child: Row(
+                    // mainAxisAlignment: MainAxisAlignment.center,
+
+                    children: [
+
+                      Image.asset("images/google.png",
+                      height: 50,
+                      width: 50,
+
+
+                      fit: BoxFit.cover,
                       ),
+                      SizedBox(width:20,),
+                      Text("Sign in with Google",
+                      textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 21,
+                            fontWeight: FontWeight.bold),
+                          ),
 
-                ],
+                    ],
+                  ),
+
+
+
+                  ),
               ),
-
-
-
-              ),
+            ),
 
 
           ],
