@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
               50,width: 50,fit:BoxFit.cover,
               ),
 
-              SizedBox(width: 7.0,),
+              SizedBox(width: 8.0,),
               Text(
                 "Hello,",
                 textAlign: TextAlign.center,
@@ -70,7 +70,7 @@ class _HomeState extends State<Home> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 40.0,
+                  fontSize: 39.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
