@@ -29,7 +29,6 @@ class _HomeState extends State<Home> {
                 SizedBox(width: 1.0),
                 Text(
                   "Hello,",
-                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 24,
@@ -39,19 +38,18 @@ class _HomeState extends State<Home> {
 
                 Text(
                   " Jui",
-                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
+
                 Spacer(),
 
                 Container(
                   padding: EdgeInsets.all(5),
                   margin: EdgeInsets.only(right: 20.0),
-
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(30),
@@ -60,9 +58,9 @@ class _HomeState extends State<Home> {
                 ),
               ],
             ),
+
             Text(
               "   Welcome to",
-              // textAlign: TextAlign.center,
               style: TextStyle(
                 color: Color.fromARGB(197, 255, 255, 255),
                 fontSize: 24,
@@ -72,20 +70,43 @@ class _HomeState extends State<Home> {
 
             Text(
               "  ChatUp",
-              textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 40.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
+
             SizedBox(height: 20.0),
 
             Expanded(
               child: Container(
+                padding: EdgeInsets.only(left: 30.0,right: 20.0),
                 width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(color: Colors.white),
-                child: Column(children: [Text("")]),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    SizedBox(height: 30.0,),
+                    Container(
+                      // padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 230, 230, 247),
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none,prefixIcon: Icon(Icons.search),
+                            hintText:"Search Username..."
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
