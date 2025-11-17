@@ -96,15 +96,26 @@ class _HomeState extends State<Home> {
                     Container(
                       // padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 230, 230, 247),
+                          color: Color.fromARGB(255, 230, 230, 247),borderRadius: BorderRadius.circular(12)
                       ),
                       child: TextField(
                         decoration: InputDecoration(
-                            border: InputBorder.none,prefixIcon: Icon(Icons.search),
+                            border: InputBorder.none,
+                            prefixIcon:
+                            Icon(Icons.search),
                             hintText:"Search Username..."
                         ),
                       ),
                     ),
+                    Container(
+                      decoration: BoxDecoration(color: Colors.white),
+                      width: MediaQuery.of(context).size.width,
+                      child: Row(
+                        children: [
+                          Image.asset("images")
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),
