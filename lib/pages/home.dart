@@ -236,7 +236,7 @@ class _HomeState extends State<Home> {
             ),
 
             Text(
-              "   Welcome to",
+              "   Welcome To",
               style: TextStyle(
                 color: Color.fromARGB(197, 255, 255, 255),
                 fontSize: 24,
