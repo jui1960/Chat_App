@@ -112,6 +112,20 @@ class _ChatPageState extends State<ChatPage> {
                         ),
                       ],
                     ),
+                    SizedBox(height: 20.0,),
+                    Container(
+                      child:
+                      Row(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.all(5),
+                            decoration:BoxDecoration(color: Color(0xff703eff),borderRadius:
+                            BorderRadius.circular(60)),
+                            child: Icon(Icons.mic,size:35.0,color: Colors.white,),
+                          )
+                        ],
+                      ),
+                    )
 
                   ],
                 ),
