@@ -110,7 +110,7 @@ class _ChatPageState extends State<ChatPage> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 20.0),
+                    SizedBox(height:MediaQuery.of(context).size.height/2.1),
                     Container(
                       child: Row(
                         children: [
