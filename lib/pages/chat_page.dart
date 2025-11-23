@@ -13,24 +13,25 @@ class _ChatPageState extends State<ChatPage> {
     return Scaffold(
       backgroundColor: const Color(0xff703eff),
 
-
       body: Container(
         margin: EdgeInsets.only(top: 30.0),
         child: Column(
-
           children: [
             Padding(
               padding: EdgeInsets.only(left: 20.0),
               child: Row(
                 children: [
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Navigator.pop(context);
                     },
 
-
-                      child: Icon(Icons.arrow_back_ios_new_rounded,color: Colors.white,)),
-                  SizedBox(width: MediaQuery.of(context).size.width/5),
+                    child: Icon(
+                      Icons.arrow_back_ios_new_rounded,
+                      color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(width: MediaQuery.of(context).size.width / 5),
 
                   Text(
                     "Jannati akter",
@@ -43,19 +44,49 @@ class _ChatPageState extends State<ChatPage> {
                 ],
               ),
             ),
-           Expanded(child:
-           Container(
-             padding: EdgeInsets.only(left: 30.0,right: 20.0),
-             width: MediaQuery.of(context).size.width,
-             decoration: BoxDecoration(
-               color: Colors.white,
-               borderRadius: BorderRadius.only(
-                 topLeft: Radius.circular(30),
-                 topRight: Radius.circular(30),
-               )
+            SizedBox(height: 30.0),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.only(left: 10.0),
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    SizedBox(height: 50.0),
 
-             ),
-           ))
+                    Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(13),
+                          decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(30),
+                              topRight: Radius.circular(30),
+                              bottomRight: Radius.circular(30),
+                            ),
+                          ),
+                          child: Text(
+                            "Hey how are you",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 26,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
