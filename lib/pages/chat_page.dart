@@ -47,7 +47,7 @@ class _ChatPageState extends State<ChatPage> {
             SizedBox(height: 30.0),
             Expanded(
               child: Container(
-                padding: EdgeInsets.only(left: 10.0),
+                padding: EdgeInsets.only(left: 8.0),
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -63,7 +63,7 @@ class _ChatPageState extends State<ChatPage> {
                     Row(
                       children: [
                         Container(
-                          padding: EdgeInsets.all(13),
+                          padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             color: Colors.blue,
                             borderRadius: BorderRadius.only(
@@ -83,15 +83,13 @@ class _ChatPageState extends State<ChatPage> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 20.0,),
-
-
+                    SizedBox(height: 20.0),
 
                     Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Container(
-                          margin:EdgeInsets.only(right:10.0),
+                          margin: EdgeInsets.only(right: 20.0),
                           padding: EdgeInsets.all(13),
                           decoration: BoxDecoration(
                             color: Colors.black45,
@@ -112,21 +110,57 @@ class _ChatPageState extends State<ChatPage> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 20.0,),
+                    SizedBox(height: 20.0),
                     Container(
-                      child:
-                      Row(
+                      child: Row(
                         children: [
                           Container(
                             padding: EdgeInsets.all(5),
-                            decoration:BoxDecoration(color: Color(0xff703eff),borderRadius:
-                            BorderRadius.circular(60)),
-                            child: Icon(Icons.mic,size:35.0,color: Colors.white,),
-                          )
+                            decoration: BoxDecoration(
+                              color: Color(0xff703eff),
+                              borderRadius: BorderRadius.circular(60),
+                            ),
+                            child: Icon(
+                              Icons.mic,
+                              size: 35.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(width: 10.0),
+                          Expanded(
+                            child: Container(
+                              padding: EdgeInsets.only(left: 10.0),
+                              decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 219, 219, 233),
+                              ),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  border: InputBorder.none,
+                                  hintText: "write a message",
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 10.0),
+
+
+                          Container(
+                            padding: EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              color: Color(0xff703eff),
+                              borderRadius: BorderRadius.circular(60),
+                            ),
+                            child: Icon(
+                              Icons.send,
+                              size: 30.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(width: 10.0),
+
                         ],
                       ),
-                    )
-
+                    ),
                   ],
                 ),
               ),
