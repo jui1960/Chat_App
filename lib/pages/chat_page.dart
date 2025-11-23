@@ -83,6 +83,36 @@ class _ChatPageState extends State<ChatPage> {
                         ),
                       ],
                     ),
+                    SizedBox(height: 20.0,),
+
+
+
+                    Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Container(
+                          margin:EdgeInsets.only(right:10.0),
+                          padding: EdgeInsets.all(13),
+                          decoration: BoxDecoration(
+                            color: Colors.black45,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(30),
+                              topRight: Radius.circular(30),
+                              bottomLeft: Radius.circular(30),
+                            ),
+                          ),
+                          child: Text(
+                            "I amm fine!",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 26,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+
                   ],
                 ),
               ),
