@@ -137,6 +137,8 @@ class _ChatPageState extends State<ChatPage> {
                                 decoration: InputDecoration(
                                   border: InputBorder.none,
                                   hintText: "write a message",
+                                  suffixIcon: Icon(Icons.attach_file),
+
                                 ),
                               ),
                             ),
