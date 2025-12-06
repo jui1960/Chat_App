@@ -28,6 +28,8 @@ class AuthMethods{
 
     UserCredential result = await firebaseAuth.signInWithCredential(credential);
     User? userDetails = result.user;
+    String username = userDetails!.email!.replaceAll("@gmail.com", "");
+    String firstletter = username.substring(0,1).toUpperCase();
 
     if(result != null){
       Map<String, dynamic> userinfoMap={
@@ -35,6 +37,8 @@ class AuthMethods{
         "Email": userDetails!.email,
         "Image": userDetails.photoURL,
         "Id": userDetails.uid,
+        "username":username.toUpperCase(),
+        "SearchKey": firstletter
       };
       await DatabaseMethods().addUser(userinfoMap,userDetails!.uid).then((value){
         ScaffoldMessenger.of(context).showSnackBar(

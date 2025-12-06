@@ -1,5 +1,6 @@
-// import 'package:flutter/material.dart';
-//
+import 'package:flutter/material.dart';
+import '../services/auth.dart';
+
 // class Onboarding extends StatefulWidget {
 //   const Onboarding({super.key});
 //
@@ -155,39 +156,44 @@ class _OnboardingState extends State<Onboarding> {
 
             const SizedBox(height: 70.0),
 
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 40.0),
-              child: Material(
-                elevation: 3.0,
-                color: Colors.transparent,
-                borderRadius: BorderRadius.circular(30),
-                child: Container(
-                  height: 70,
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: const Color(0xff703eff),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        "images/google.png",
-                        height: 45,
-                        width: 45,
-                        fit: BoxFit.contain,
-                      ),
-                      const SizedBox(width: 15),
-                      const Text(
-                        "Sign in with Google",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 21,
-                          fontWeight: FontWeight.bold,
+            GestureDetector(
+              onTap: (){
+                AuthMethods().SignInWithGoogle(context);
+              },
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 40.0),
+                child: Material(
+                  elevation: 3.0,
+                  color: Colors.transparent,
+                  borderRadius: BorderRadius.circular(30),
+                  child: Container(
+                    height: 70,
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: const Color(0xff703eff),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          "images/google.png",
+                          height: 45,
+                          width: 45,
+                          fit: BoxFit.contain,
                         ),
-                      ),
-                    ],
+                        const SizedBox(width: 15),
+                        const Text(
+                          "Sign in with Google",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 21,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
