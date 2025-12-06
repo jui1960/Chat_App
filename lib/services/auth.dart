@@ -40,7 +40,7 @@ class AuthMethods{
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
               backgroundColor: Colors.green,
-              content: Text("Registration Successfull!",
+              content: Text("Registration Successfull!!",
           style:  TextStyle(
             color:Colors.black,
             fontSize: 22.0,fontWeight: FontWeight.bold,
