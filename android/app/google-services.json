@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "33763750838",
+    "project_id": "chatup-48849",
+    "storage_bucket": "chatup-48849.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33763750838:android:5c370fc5d686cb9fe3c717",
+        "android_client_info": {
+          "package_name": "com.example.chat_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCE7RGND8bl7zQDY5NKnmfahQKd12-3paE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
