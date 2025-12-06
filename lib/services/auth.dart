@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'shared_pref.dart';
 import 'database.dart';
 
 class AuthMethods{
@@ -30,6 +31,12 @@ class AuthMethods{
     User? userDetails = result.user;
     String username = userDetails!.email!.replaceAll("@gmail.com", "");
     String firstletter = username.substring(0,1).toUpperCase();
+
+    await SharedpreferenceHelper().saveUserDisplayName(userDetails.displayName!);
+    await SharedpreferenceHelper().saveUserEmail(userDetails!.email!);
+    await SharedpreferenceHelper().saveUserId(userDetails.uid);
+    await SharedpreferenceHelper().saveUserUserName(username);
+    await SharedpreferenceHelper().saveUserImage(userDetails.photoURL!);
 
     if(result != null){
       Map<String, dynamic> userinfoMap={
